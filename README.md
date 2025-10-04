@@ -1,23 +1,14 @@
 # My Personal Project
 
-## A subtitle
 
-A *bulleted* list:
 ## Purpose:
-My application will be aimed at a demographic of people that care about their local produce. A customer can look up a local store (or see stores nearby (possibly)) and see where their exports come from as well as a **sustainability rating** for that store. It is of interest to me because I think its cool and interesting idea.
+My application will be aimed at an middle-upper/upper class of workers. It is aimed at people who have enough energy and time to take a step toward a healthier life, but feel like its a bit overwhelming to do so. To do research, downoloading multiple apps and just generally starting a revised version of a meal plan can take a lot of thought and energy out of a person, leaving them burned out before they even start.
 
-- item 2
-- item 3
+The purpose of this product aims at seamlessly incorporating the app into our life, without taking too much energy and effort of our customer. To provide resources such as diet plan (meal recipes), where to buy them, a calorie tracker and statistic on progress. To make the process more engaging I could also add a system of minigames based on tasks and a friend system.
 
-An example of text with **bold** and *italic* fonts. 
+### However, it is important to note that while these features seem cool, if done without balance or intent to fit the client they can backfire and overwhelm the client. Sometimes it is better to do few features but make them good. For now, it is better to build a project by steps and see how the features incorporate with eachother and adapt on the go.
 
-# User stories:
-- As a user I want to add a store to my "favorites" list Done
-- As a user I want to lookup stores to see their rating Done
-- As a user I want to filter searches based on names, countries or rating Done
-- As a user I want to leave a store a rating Done
-- As a user I want my account to be saved when its created so that it doesn't have to be created again (Load function)
-- As a user I want my favorites list to be saved every time I add to it (Writing function)
+A customer can look up a local store (or see stores nearby (possibly)) and see where their exports come from as well as a sustainability rating for that store.
 
 
 # Structure:
