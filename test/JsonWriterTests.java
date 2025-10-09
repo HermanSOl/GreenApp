@@ -1,8 +1,9 @@
-package model;
+package test;
 
 import model.User;
 import persistence.JsonReader;
 import persistence.JsonWriter;
+import model.Shop;
 
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
@@ -71,7 +72,7 @@ public class JsonWriterTests {
             writer.close();
 
             JsonReader reader = new JsonReader(TEST_FILE);
-            List<User> loadedUsers = reader.read(); // not yet implemented! test will fail for now
+            List<User> loadedUsers = reader.read();
 
             assertEquals(1, loadedUsers.size());
             User neededloader = loadedUsers.get(0);

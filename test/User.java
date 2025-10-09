@@ -1,6 +1,8 @@
-package model;
+package test;
 
 import org.json.JSONObject;
+import model.EventLog;
+import model.Event;
 
 import persistence.Writable;
 
