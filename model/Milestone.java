@@ -1,11 +1,12 @@
-package model.milestones;
+package model;
 
 import org.json.JSONObject;
 
-import model.User;
 import persistence.Writable;
+import model.User;
 
 import java.util.List;
+import java.util.*;
 
 // Milestone that User can have. 
 // Has title, rarity, status of completion, picture 
@@ -61,6 +62,7 @@ public class Milestone {
                 //}
                 break;
             default:
+                System.out.print("Not right type of Milestone");
                 break;
         }
     }
