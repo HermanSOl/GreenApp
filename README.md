@@ -21,6 +21,7 @@ A customer can look up a local store (or see stores nearby (possibly)) and see w
 
     3. The Milestone Class has a title, rarity (0-100%), status, image, condition, user.
         It took me some thinking to realize which way I would want to implement my Milestone class. Each milestone could fall in certain groups but have a different user (since we need one milestone tied to one user), so I thought it would make sense to create general interfaces for each type of milestone. The conflict was that I wanted to have milestones check themselves based on their condition and what the user achieved so far, so it would be easier to update milestones down the line. That is why, for now, I decided to have just one single class for Milestone and create each one. If, however, further down the line I'll realize that Milestones behave way different and their condition satisfaction coul not be fit into one method, it would be best to create a more abstract structure.
+       Edit: in the end, for now I figured it would be best to just have one class and track their behaviour when checking the condition through a seperate field "type". As much as I wanted to implement more abstract structure for less fog, I feel like this approach would make it redundant.
        
 # The Flow of the interface:
 1. The user will be presented with the following message when the program is run: "Welcome to GreenApp!" and will have the options to lookup stores, create or log in into an account. 
