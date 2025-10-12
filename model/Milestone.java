@@ -18,12 +18,12 @@ public class Milestone {
     // Creates an Instance of Milestone with title, rarity, status, 
     // picture, condition and User
 
-    public Milestone(String title, String type, Double rarity, String image, int condition, User user){
+    public Milestone(String title, String type, Double rarity, int condition, User user){
         this.title = title;
         this.rarity = rarity;
         this.type = type;
         status = false;
-        this.image = title;
+        image = "data/resources/IncorrectMark.png";
         this.condition = condition;
         this.user = user;
     }
@@ -38,8 +38,8 @@ public class Milestone {
             case "Favorites":
                 if (user.getFavorites().size() >= condition) {
                     status = true;
-                    // user.addMilestone(this)
-                    // image = newImage (be the completion image)
+                    user.addMilestone(this);
+                    image = "data/resources/CorrectMark.png";
                     eventLog.logEvent(new Event(user.getNickname() + "has achieved " + title + "milestone"));
                 }
                 break;

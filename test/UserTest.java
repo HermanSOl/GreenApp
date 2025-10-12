@@ -7,20 +7,26 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import model.Milestone;
+import model.User;
+import model.Shop;
 
 public class UserTest {
     private User testUser;
     private Shop evergreens;
+    private Milestone milestone;
 
     @BeforeEach
     void runBefore() {
         testUser = new User("Grace", "Lovely34");
         evergreens = new Shop("Evergreens", 3.9, "Seattle");
+        milestone = new Milestone("CoolMilestone", "Rare", 0.6, 3, testUser);
     }
 
     @Test
@@ -55,6 +61,37 @@ public class UserTest {
         testUser.addShop(evergreens);
         stepper.add(evergreens);
         assertEquals(stepper, testUser.getFavorites());
+    }
+
+    @Test
+    void testAddMilestoneOne(){
+        HashSet<Milestone> stepper = new HashSet();
+        testUser.addMilestone(milestone);
+        stepper.add(milestone);
+        assertEquals(stepper, testUser.getMilestones());
+        assertEquals(1, testUser.getMilestones().size());
+    }
+
+    @Test
+    void testAddMilestoneTwo(){
+        HashSet<Milestone> stepper = new HashSet();
+        Milestone another = new Milestone("ss", "alr", 
+        0.2, 0, testUser);
+        testUser.addMilestone(milestone);
+        testUser.addMilestone(another);
+        stepper.add(milestone);
+        stepper.add(another);
+        assertEquals(stepper, testUser.getMilestones());
+    }
+
+    @Test
+    void testAddMilestoneSameOne(){
+        HashSet<Milestone> stepper = new HashSet();
+        testUser.addMilestone(milestone);
+        testUser.addMilestone(milestone);
+        stepper.add(milestone);
+        assertEquals(stepper, testUser.getMilestones());
+        assertEquals(1, testUser.getMilestones().size());
     }
 
     @Test

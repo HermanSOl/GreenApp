@@ -8,6 +8,7 @@ import org.json.JSONArray;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 // User with nickname, id and a list of favorite shops.
 
@@ -16,6 +17,7 @@ public class User implements Writable {
     private String password;
     private List<Shop> favorites;
     private EventLog eventLog;
+    private HashSet<Milestone> milestones;
 
     // Creates an Instance of User with nickname, password id and empty list of
     // favorites
@@ -25,6 +27,7 @@ public class User implements Writable {
         favorites = new ArrayList<Shop>();
         eventLog = eventLog.getInstance();
         eventLog.logEvent(new Event("Created a new User: " + nickname));
+        milestones = new HashSet<>();
     }
 
     // MODFIES: this
@@ -36,6 +39,12 @@ public class User implements Writable {
         }
         eventLog.logEvent(new Event("Added " + s.getName() + " to the list of favorites"));
     }
+
+    // MODIFIES: this
+    // EFFECTS: adds the given milestone to the list of milestones
+    public void addMilestone(Milestone m){
+        milestones.add(m);
+    } 
 
     // MODIFIES: this
     // EFFECTS: removes the given shop from the list
@@ -96,6 +105,10 @@ public class User implements Writable {
 
     public List<Shop> getFavorites() {
         return favorites;
+    }
+
+    public HashSet<Milestone> getMilestones() {
+        return milestones;
     }
 
 }
