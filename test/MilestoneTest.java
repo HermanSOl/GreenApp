@@ -11,6 +11,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.Milestone;
+import model.User;
+import model.Shop;
 
 public class MilestoneTest {
     private Milestone testMilestone;
@@ -21,13 +23,17 @@ public class MilestoneTest {
     @BeforeEach
     void runBefore() {
         testUser = new User("lol", "lol123");
-        testMilestone = new Milestone("Favorites1", "Favorites", 0.4, false, "-", 2, testUser);
+        testMilestone = new Milestone("Favorites1", "Favorites", 0.4, "-", 2, testUser);
+        evergreens1 = new Shop("Cool store", 0, "dm");
+        evergreens2 = new Shop("Cool store2", 0, "dm");
     }
 
     @Test
     void testConstructor() {
         assertNotNull(testMilestone);
         assertEquals("Favorites1", testMilestone.getTitle());
+        assertEquals(testUser, testMilestone.getUser());
+        assertEquals("Favorites", testMilestone.getType());
     }
 
     @Test

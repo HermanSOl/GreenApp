@@ -1,13 +1,7 @@
 package model;
 
-import org.json.JSONObject;
-
-import persistence.Writable;
-import model.User;
-
-import java.util.List;
-import java.util.*;
-
+import java.util.Objects;
+ 
 // Milestone that User can have. 
 // Has title, rarity, status of completion, picture 
 // as well as a condition and a User its tied to
@@ -19,15 +13,16 @@ public class Milestone {
     private String image;
     private int condition;
     private User user;
+    private EventLog eventLog;
 
     // Creates an Instance of Milestone with title, rarity, status, 
     // picture, condition and User
 
-    public Milestone(String title, String type, Double rarity, Boolean status, String image,
-    int condition, User user){
+    public Milestone(String title, String type, Double rarity, String image, int condition, User user){
         this.title = title;
         this.rarity = rarity;
-        this.status = status;
+        this.type = type;
+        status = false;
         this.image = title;
         this.condition = condition;
         this.user = user;
@@ -45,6 +40,7 @@ public class Milestone {
                     status = true;
                     // user.addMilestone(this)
                     // image = newImage (be the completion image)
+                    eventLog.logEvent(new Event(user.getNickname() + "has achieved " + title + "milestone"));
                 }
                 break;
             case "Friends":
@@ -62,11 +58,26 @@ public class Milestone {
                 //}
                 break;
             default:
-                System.out.print("Not right type of Milestone");
                 break;
         }
     }
 
+    // EFFECTS: overrides equals for future hashset comparesements
+    // MILESTONES ARE EQUAL IF THEY HAVE EQUAL:
+    // title  rarity  type  user 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Milestone)) return false;
+        Milestone o = (Milestone) obj;
+        return title.equals(o.title) && rarity.equals(o.rarity) && type.equals(o.type)
+        && user.equals(o.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, type);
+    }
     // GETTER METHODS
 
     public String getTitle(){
@@ -87,6 +98,10 @@ public class Milestone {
     
     public User getUser(){
         return user;
+    }
+
+    public String getType(){
+        return type;
     }
 
 
