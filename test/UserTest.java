@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 import org.json.JSONArray;
@@ -92,6 +93,34 @@ public class UserTest {
         stepper.add(milestone);
         assertEquals(stepper, testUser.getMilestones());
         assertEquals(1, testUser.getMilestones().size());
+    }
+
+    @Test
+    void testAddFriendsOne(){
+        HashMap<String,User> stepper = new HashMap<>();
+        testUser.addFriend(testUser);
+        stepper.put(testUser.getNickname(), testUser);
+        assertEquals(stepper, testUser.getFriends());
+    }
+
+    @Test
+    void testAddFriendsTwo(){
+        HashMap<String,User> stepper = new HashMap<>();
+        User newguy = new User(":guy", "12");
+        testUser.addFriend(testUser);
+        testUser.addFriend(newguy);
+        stepper.put(testUser.getNickname(), testUser);
+        stepper.put(newguy.getNickname(),newguy);
+        assertEquals(stepper, testUser.getFriends());
+    }
+
+    @Test
+    void testAddFriendsSameOne(){
+        HashMap<String,User> stepper = new HashMap<>();
+        testUser.addFriend(testUser);
+        testUser.addFriend(testUser);
+        stepper.put(testUser.getNickname(), testUser);
+        assertEquals(stepper, testUser.getFriends());
     }
 
     @Test
