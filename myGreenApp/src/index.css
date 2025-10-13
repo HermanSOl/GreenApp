@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,13 +24,48 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
 }
+
+/* The login container area */
+
+.login-container {
+    border: 4.2px solid #62C370;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px #35683d;
+    width: 40vh;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 0.7vh;
+    padding-top: 0;
+}
+
+.login-container h1{
+    font-size: 2.5rem;
+}
+
+.login-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    padding: 14px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+
+/*------------------------------- */
 
 h1 {
   font-size: 3.2em;
@@ -46,9 +83,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
