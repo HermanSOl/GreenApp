@@ -26,6 +26,7 @@ public class Milestone {
         image = "data/resources/IncorrectMark.png";
         this.condition = condition;
         this.user = user;
+        eventLog = eventLog.getInstance();
     }
 
 
@@ -55,13 +56,13 @@ public class Milestone {
                     setToComplete();
                 }
                 break;
-            case "Distance":
+            //case "Distance": FOR FUTURE (possibly)
                 //if (user.getMiles().size() >= condition) {
-                    status = true;
+                    //status = true;
                     // user.addMilestone(this)
                     // image = newImage (be the completion image)
                 //}
-                break;
+                //break;
             default:
                 break;
         }
