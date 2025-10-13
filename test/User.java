@@ -2,7 +2,6 @@ package test;
 
 import org.json.JSONObject;
 import model.EventLog;
-import model.Milestone;
 import model.Event;
 
 import persistence.Writable;
@@ -11,7 +10,6 @@ import org.json.JSONArray;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 // User with nickname, id and a list of favorite shops.
 

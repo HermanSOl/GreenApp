@@ -5,10 +5,7 @@ import persistence.JsonReader;
 import persistence.JsonWriter;
 import model.Shop;
 
-import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

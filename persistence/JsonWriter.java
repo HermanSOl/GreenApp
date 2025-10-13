@@ -3,19 +3,15 @@ package persistence;
 import model.User;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 // Represents a writer that writes JSON representation of a User to file
 public class JsonWriter { // Inspired by JsonWriter.java from jsonserializationdemo
-    private static final int TAB = 4;
     private PrintWriter writer;
     private String destination;
 

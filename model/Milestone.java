@@ -30,6 +30,16 @@ public class Milestone {
 
 
     // MODIFIES: this
+    // EFFECTS: a helper function for checkCondition()
+    // sets the milestone as completed and adds it to user's collection
+    public void setToComplete(){
+        status = true;
+        user.addMilestone(this);
+        image = "data/resources/CorrectMark.png";
+        eventLog.logEvent(new Event(user.getNickname() + "has achieved " + title + "milestone"));
+    }
+
+    // MODIFIES: this
     // EFFECTS: checks if the condition has been satisfied, changes status to
     // true if so
 
@@ -37,18 +47,13 @@ public class Milestone {
         switch (type) {
             case "Favorites":
                 if (user.getFavorites().size() >= condition) {
-                    status = true;
-                    user.addMilestone(this);
-                    image = "data/resources/CorrectMark.png";
-                    eventLog.logEvent(new Event(user.getNickname() + "has achieved " + title + "milestone"));
+                    setToComplete();
                 }
                 break;
             case "Friends":
-                //if (user.getFriends().size() >= condition) {
-                    status = true;
-                    // user.addMilestone(this)
-                    // image = newImage (be the completion image)
-                //}
+                if (user.getFriends().size() >= condition) {
+                    setToComplete();
+                }
                 break;
             case "Distance":
                 //if (user.getMiles().size() >= condition) {
