@@ -1,13 +1,14 @@
 import LoginForm from "./LoginForm";
 
-function LoginCard(){
+function LoginCard({title}){
 
     return(
         <div class="login-container">
-            <h1>Login</h1>
+            <h1>{title}</h1>
             <LoginForm inputText = "Enter Nickname:" />
-            <LoginForm inputText = "Enter Password :"/>
-            <a href="#">Don't have an account? </a>
+            <LoginForm inputText = "Enter Password:"/>
+            <button>Submit</button>
+            <a href="#">Don't have an account?</a>
         </div>
 
         

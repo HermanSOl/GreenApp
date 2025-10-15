@@ -1,9 +1,13 @@
 import LoginCard from "./LoginCard"
-import LoginForm from "./LoginForm"
+import BackgroundStars from "./BackgroundStars"
 
 function App() {
     return(
-        <LoginCard/>
+        <body>
+            <BackgroundStars count={200} color={"#62C370"}/>
+            <LoginCard title={"Login"}/>
+        </body>
+        
     )
 }
 
