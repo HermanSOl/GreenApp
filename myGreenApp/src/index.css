@@ -32,7 +32,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #F4F6F3;
 }
 
 /* The login container area */
@@ -72,17 +72,68 @@ body{
 
 /*The background star area*/
 
-.background-star1{
-    width: 4px;
-    height: 4px;
+.background-star{
     border-radius: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
     pointer-events: none;
-    animation: rise 17s ease-out infinite;
 }
+
+#back-star300{
+    width: 4px;
+    height: 4px;
+    animation: glimmer 5s ease-out infinite 1s;
+}
+
+#back-star200{
+    width: 5px;
+    height: 5px;
+    animation: glimmer 8s ease-out infinite 3s;
+}
+
+/*--------------------------------------------*/
+
+
+/*Navigation Bar Area*/
+
+.nav-bar {
+    position: fixed;
+    top: 30px;
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 16px 40px;
+    background: rgba(255, 255, 255, 0.877);
+    box-shadow: 0 4px 10px rgba(53, 104, 61, 0.15);
+    z-index: 10;
+  }
+  
+  .navbar-link {
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navbar-link:hover {
+    cursor: pointer;
+  }
+  
+
+.gradient-text {
+    background: linear-gradient(90deg, #5BC06E, #3f864a, rgb(108, 64, 64));
+    background-size: 200%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    transition: background-position 0.6s ease;
+  }
+
+  .gradient-text:hover {
+    background-position: 100%; 
+  }
 
 h1 {
   font-size: 3.2em;
@@ -125,11 +176,14 @@ button:focus-visible {
   }
 }
 
-@keyframes rise {
-    from {
-      transform: translateY(100vh);
+@keyframes glimmer {
+    0%{
+      opacity: 1;
     }
-    to {
-      transform: translateY(0);
+    50%{
+      opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
     }
   }

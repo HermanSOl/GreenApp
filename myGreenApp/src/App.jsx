@@ -1,10 +1,13 @@
 import LoginCard from "./LoginCard"
 import BackgroundStars from "./BackgroundStars"
+import NavBar from "./NavBar"
 
 function App() {
     return(
         <body>
-            <BackgroundStars count={200} color={"#62C370"}/>
+            <NavBar/>
+            <BackgroundStars count={300} color={"#9FD8A3"}/>
+            <BackgroundStars count={200} color={"#356859"}/>
             <LoginCard title={"Login"}/>
         </body>
         
