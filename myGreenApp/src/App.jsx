@@ -1,15 +1,20 @@
-import LoginCard from "./LoginCard"
-import BackgroundStars from "./BackgroundStars"
-import NavBar from "./NavBar"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import StartingPage from "./StartingPage"
+import LoginCard from "./LoginCard";
+
+import CreateAccountPage from "./CreateAccountPage";
+
 
 function App() {
     return(
-        <body>
-            <NavBar/>
-            <BackgroundStars count={300} color={"#9FD8A3"}/>
-            <BackgroundStars count={200} color={"#356859"}/>
-            <LoginCard title={"Login"}/>
-        </body>
+        <Router>
+            <Routes>
+                <Route path="/" element={<StartingPage/>}/>
+                <Route path="/login-account" element={<LoginCard title={"Login"}/>}/>
+                <Route path="/create-account" element={<CreateAccountPage/>}/>
+            </Routes>
+        </Router>
+        
         
     )
 }
