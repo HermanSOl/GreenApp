@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StartingPage from "./StartingPage"
-import LoginCard from "./LoginCard";
+import StartingPage from "./StartingScreen/StartingPage"
+import LoginCard from "./StartingScreen/LoginCard";
 
-import CreateAccountPage from "./CreateAccountPage";
+import CreateAccountPage from "./StartingScreen/CreateAccountPage";
 
 
 function App() {
