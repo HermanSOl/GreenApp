@@ -5,12 +5,12 @@ import CreateAccCard from "./CreateAccCard"
 
 function CreateAccountPage() {
     return(
-        <body>
+        <div className="StartScreen">
             <NavBar/>
             <BackgroundStars count={300} color={"#9FD8A3"}/>
             <BackgroundStars count={200} color={"#356859"}/>
             <CreateAccCard title={"Create Account"}/>
-        </body>
+        </div>
         
     )
 }

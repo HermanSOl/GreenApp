@@ -10,7 +10,7 @@ function App() {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<StartingPage/>}/>
+                <Route path="/" element={<HomeScreen/>}/>
                 <Route path="/login-account" element={<LoginCard title={"Login"}/>}/>
                 <Route path="/create-account" element={<CreateAccountPage/>}/>
                 <Route path="/home-page" element = {<HomeScreen/>}/>
