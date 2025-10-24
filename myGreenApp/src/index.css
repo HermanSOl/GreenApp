@@ -207,6 +207,27 @@ button:hover {
 }
 
 
+/* ------------------------------------ */
+
+/* RECOMENDATIONS LIST AREA HOMEPAGE */
+
+.rec-list{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.rec-card {
+    background-color: #F4F6F3;
+    border-radius: 7px;
+    border: #35683d 3px solid;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+}
+
+
 
 button:focus,
 button:focus-visible {
