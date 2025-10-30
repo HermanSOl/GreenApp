@@ -1,12 +1,18 @@
 import RecCard from "./RecCard";
 
 
-function Recommendations(){
+function Recommendations({stores}){
     return(
         <div className="recommendations">
             <h2>Recomended Stores:</h2>
             <div className="rec-list">
-                <RecCard name={"EcoStore"} desc={"Some cool description"}/>
+            {stores.map((store, index) => (
+          <RecCard 
+            key={index} 
+            name={store.name} 
+            desc={store.desc} 
+          />
+            ))}
             </div>
         </div>
     );

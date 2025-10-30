@@ -8,7 +8,7 @@ function HomeScreen(){
         <div>
             <NavBar/>
             <MapSection/>
-            <Recommendations/>
+            <Recommendations stores={[{name: "EcoStore", desc: "Some default store"}]}/>
         </div>
     );
 }
