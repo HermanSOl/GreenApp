@@ -261,6 +261,11 @@ button:hover {
     font-size: 35px;
 }
 
+.user-page {
+    display: flex;
+    flex-direction: row;
+}
+
 
 
 
