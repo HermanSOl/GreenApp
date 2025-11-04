@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom"
 
 function NavBar(){
     return(
         <div class = "nav-bar">
-            <a class = "navbar-link gradient-text">Browse</a>
-            <a class = "navbar-link gradient-text">Account</a>
+            <Link to="/home-page" class = "navbar-link gradient-text">Browse</Link>
+            <Link to = "/user-account" class = "navbar-link gradient-text">Account</Link>
         </div>
     );
 }
