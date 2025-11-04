@@ -1,6 +1,6 @@
 import {FaUserCircle} from "react-icons/fa";
 
-function NavBar(){
+function HomeNavBar(){
     return(
         <nav className="navbar">
             <div className="nav-logo">GreenApp</div>
@@ -9,4 +9,4 @@ function NavBar(){
     );
 }
 
-export default NavBar;
+export default HomeNavBar;
