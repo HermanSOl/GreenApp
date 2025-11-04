@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import NavBar from "./HomeNav";
+import HomeNavBar from "./HomeNavBar";
 import MapSection from "./MapSection";
 import Recommendations from "./Recommendations";
 
 function HomeScreen(){
     return(
         <div>
-            <NavBar/>
+            <HomeNavBar/>
             <MapSection/>
             <Recommendations stores={[{name: "EcoStore", desc: "Some default store"}]}/>
         </div>
