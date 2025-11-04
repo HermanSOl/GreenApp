@@ -2,9 +2,10 @@ import UserIcon from "./UserIcon";
 import { Link } from "react-router-dom";
 
 function UserPage(){
-    <div>
+    return(
         <UserIcon username={"randomname"}/>
-    </div>
-}
+
+    );
+} 
 
 export default UserPage;
