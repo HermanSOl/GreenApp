@@ -1,10 +1,12 @@
+import RecCard from "../HomeScreen/RecCard";
 import Recommendations from "../HomeScreen/Recommendations";
 
 
 function FavoritesSection(){
     return(
         <div className="favorites-container">
-            <Recommendations stores={[{name: "EcoStore", desc: "Some default store"}]}/>
+            <RecCard name={"Someone"} desc={"something"}></RecCard>
+            <RecCard name={"Someone2"} desc={"something2"}></RecCard>
         </div>
     );
 }
