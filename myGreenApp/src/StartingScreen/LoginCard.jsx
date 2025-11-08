@@ -8,7 +8,7 @@ function LoginCard({title}){
             <h1>{title}</h1>
             <LoginForm inputText = "Enter Nickname:"/>
             <LoginForm inputText = "Enter Password:"/>
-            <button>Submit</button>
+            <button>Log in</button>
             <Link to = "/create-account">Don't have an account?</Link>
         </div>
 
